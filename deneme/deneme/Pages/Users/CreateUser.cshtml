@@ -1,0 +1,31 @@
+﻿@page
+@model deneme.Pages.User.CreateUserModel
+@{
+}
+<form method="post">
+    <input type="hidden" asp-for="NewUser.Id" />
+    <div class="row">
+        <label>Name</label>
+        <input asp-for="NewUser.Name" />
+
+    </div>
+    <div class="row">
+        <label>Email</label>
+        <input asp-for="NewUser.Email" />
+    </div>
+    <div class="row">
+        <button type="submit">Kaydet</button>
+    </div>
+</form>
+
+<form method="post">
+    <tbody>
+        @foreach (var obj in Model.UserList)
+        {
+            <tr>
+                <td width="50%">@obj.Name</td>
+                <td width="30%">@obj.DisplayOrder</td>
+            </tr>
+        }
+    </tbody>
+</form>

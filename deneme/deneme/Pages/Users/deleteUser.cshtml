@@ -1,0 +1,19 @@
+﻿@page
+@model deneme.Pages.User.deleteUserModel
+@{
+}
+<form method="post">
+    <div class="row">
+        <label>Delete User</label>
+        <label>ID</label>
+        <input asp-for="DeleteUser.Id" />
+      <button type="submit" class="btn btn-danger">Delete</button>
+    </div>
+</form>
+
+<form metod="post" asp-page-handler ="OnPost2">
+    <div class="row">
+        <label>Delete Db</label>
+        <button type="submit" name="deleteAll" class="btn btn-danger">Delete All Records</button>
+    </div>
+</form>
