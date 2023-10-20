@@ -12,7 +12,7 @@ namespace deneme.Pages.Users
         public Model.User NewUser { get; set; }
         
         public ApplicationDbContext Context { get; set; }
-        //public IEnumerable<User> UserList { get; set; } //?
+        
         public List<Users> DataList { get; set; }
 
         public CreateUserModel(ApplicationDbContext context)
