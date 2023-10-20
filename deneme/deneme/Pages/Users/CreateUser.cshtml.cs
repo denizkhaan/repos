@@ -22,7 +22,7 @@ namespace deneme.Pages.Users
         }
         public void OnGet()
         {
-            NewUser = new Model.User(); // cshtml model sayfasi mi oluyo
+            NewUser = new Model.User(); 
         }
 
         public void OnPost()
