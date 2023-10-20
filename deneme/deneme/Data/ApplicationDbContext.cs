@@ -6,8 +6,12 @@ namespace deneme.Data
 {
     public class ApplicationDbContext : DbContext 
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options): base(options) { }
-        public DbSet<Category> Category { get; set; } // table 
+        
+      
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options): base(options) {
+        
+        }
+
         public DbSet<User> Users { get; set; } 
     }
 }

@@ -1,0 +1,23 @@
+﻿@page
+@model deneme.Pages.Login.UserLoginModel
+@{
+}
+<form method="post">
+    <input type="hidden" asp-for="NewUser.Id" />
+    <div class="row">
+        <label>Name</label>
+        <input asp-for="NewUser.Name" />
+    </div>
+    <div class="row">
+        <label>Email</label>
+        <input asp-for="NewUser.Email" />
+    </div>
+    <div class="row">
+        <label asp-for="NewUser.IsAdmin">Admin:</label>
+        <input type="checkbox" asp-for="NewUser.IsAdmin" />
+    </div>
+    <div class="row">
+        <button type="submit">Kaydet</button>
+    </div>
+
+</form>
