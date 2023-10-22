@@ -2,6 +2,21 @@
 @model deneme2.Pages.User.UserListModel
 @{
 }
-<table>
-
-</table>
+<form method="post">
+    <input type="hidden" asp-for="Users.Id" />
+    <div class="row">
+        <label>Name</label>
+        <input asp-for="Users.UserName" />
+    </div>
+    <div class="row">
+        <label>Email</label>
+        <input asp-for="Users.Email" />
+    </div>
+    <div class="row">
+        <label>Password</label>
+        <input asp-for="Users.Password" />
+    </div>
+    <div class="row">
+        <button type="submit">Kaydet</button>
+    </div>
+</form>

@@ -1,4 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace deneme.Model
 
 {
@@ -10,7 +12,10 @@ namespace deneme.Model
         public string Email { get; set; }
         public bool IsAdmin { get; set; }
 
+        [ForeignKey("UserCategory")]
+        public int UserCategoryId { get; set; }
+        public UserDetails UserDetails { get; set; }
 
-        // public Category UserCategory { get; set; }
+        
     }
 }

@@ -1,0 +1,19 @@
+﻿@page
+@model deneme.Pages.User.DetailQueryModel
+@{
+    
+}
+<form method="post">
+    <div class="row">
+        <lable> Id?</lable>
+        <input asp-for="UserInputID" />
+        <button type="submit">Sumbit</button>
+    </div>
+</form>
+
+@if (Model.User1 != null)
+{
+    <h2>User Details</h2>
+    <p><strong>Phone :</strong> @Model.User1.Phone</p>
+    <p><strong>Address:</strong> @Model.User1.Address</p>
+}

@@ -10,10 +10,12 @@ namespace deneme.Pages.User
     {
         [BindProperty]
         public Model.User NewUser { get; set; }
+        [BindProperty]
+        public Model.UserDetails UserDetails { get; set; }
 
         public ApplicationDbContext ContextDb { get; set; }
 
-       public List<Model.User> DataList { get; set; }
+        public List<Model.User> DataList { get; set; }
 
         public CreateUserModel(ApplicationDbContext context)
         {
@@ -22,8 +24,11 @@ namespace deneme.Pages.User
         }
         public void OnGet()                                                                             
         {
+            //DataList = new List<Model.User>();
             DataList = ContextDb.Users.ToList();
             NewUser = new Model.User();
+            UserDetails = new Model.UserDetails();
+            
         }
 
         public void OnPost()
@@ -31,6 +36,8 @@ namespace deneme.Pages.User
             try
             {
                 ContextDb.Users.Add(NewUser);
+                NewUser.UserDetails = UserDetails;
+                ContextDb.Details.Add(UserDetails);
                 ContextDb.SaveChanges();
             }
             catch (Exception ex) { }

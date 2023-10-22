@@ -1,25 +1,42 @@
-﻿@page
-@model deneme.Pages.User.CreateUserModel
-@{
-}
-<form method="post">
-    <input type="hidden" asp-for="NewUser.Id" />
+﻿    @page
+    @model deneme.Pages.User.CreateUserModel
+    @{
+    }
+
+
+    <form method="post">
+        <input type="hidden" asp-for="NewUser.Id" />
+        <div class="row">
+            <label>Name</label>
+            <input asp-for="NewUser.Name" />
+        </div>
+        <div class="row">
+            <label>Email</label>
+            <input asp-for="NewUser.Email" />
+        </div>
+        <div class="row">
+            <label asp-for="NewUser.IsAdmin">Admin:</label>
+            <input type="checkbox" asp-for="NewUser.IsAdmin" />
+        </div>
+
+    <input type="hidden" asp-for="UserDetails.Id" />
+        <div class="row">
+            <label>Phone Number</label>
+            <input asp-for="UserDetails.Phone" />
+        </div>
     <div class="row">
-        <label>Name</label>
-        <input asp-for="NewUser.Name" />
+        <label>Address</label>
+        <input asp-for="UserDetails.Address" />
     </div>
-    <div class="row">
-        <label>Email</label>
-        <input asp-for="NewUser.Email" />
-    </div>
-    <div class="row">
-        <label asp-for="NewUser.IsAdmin">Admin:</label>
-        <input type="checkbox" asp-for="NewUser.IsAdmin" />
-    </div>
-    <div class="row">
-        <button type="submit">Kaydet</button>
-    </div>
-</form>
+        <div class="row">
+            <button type="submit">Kaydet</button>
+        </div>
+    </form>
+
+
+
+
+
 <table class="table table-bordered">
     <thead>
         <tr>
@@ -30,7 +47,7 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var user in Model.DataList)
+        @foreach (var user in Model.DataList)  // ex atiyo
         {
             <tr>
                 <td>@user.Id</td>

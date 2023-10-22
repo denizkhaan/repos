@@ -37,7 +37,7 @@ namespace deneme2.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("UserDetailsId")
+                    b.Property<int>("UserCategoryId")
                         .HasColumnType("int");
 
                     b.Property<string>("UserName")
@@ -45,8 +45,6 @@ namespace deneme2.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("UserDetailsId");
 
                     b.ToTable("Users");
                 });
@@ -59,28 +57,38 @@ namespace deneme2.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Adress")
-                        .IsRequired()
+                    b.Property<string>("Address")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Phone")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("UserId")
+                        .IsUnique();
 
                     b.ToTable("UserCategory");
                 });
 
-            modelBuilder.Entity("deneme2.Models.User", b =>
+            modelBuilder.Entity("deneme2.Models.UserCategory", b =>
                 {
-                    b.HasOne("deneme2.Models.UserCategory", "UserDetails")
-                        .WithMany()
-                        .HasForeignKey("UserDetailsId")
+                    b.HasOne("deneme2.Models.User", "User")
+                        .WithOne("UserDetails")
+                        .HasForeignKey("deneme2.Models.UserCategory", "UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("UserDetails");
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("deneme2.Models.User", b =>
+                {
+                    b.Navigation("UserDetails")
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

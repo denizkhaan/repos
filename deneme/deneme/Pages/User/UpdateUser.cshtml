@@ -17,6 +17,14 @@
         <input asp-for="UserForUpdate.Email" />
     </div>
     <div class="row">
+        <label>New Phone</label>
+        <input asp-for="UserForUpdate.UserDetails.Phone" />
+    </div>
+    <div class="row">
+        <label>New Address</label>
+        <input asp-for="UserForUpdate.UserDetails.Address" />
+    </div>
+    <div class="row">
         <button type="submit">Kaydet</button>
     </div>
 </form>

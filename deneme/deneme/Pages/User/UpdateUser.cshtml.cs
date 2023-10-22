@@ -1,4 +1,5 @@
 ﻿using deneme.Data;
+using deneme.Model;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
@@ -26,13 +27,21 @@ namespace deneme.Pages.User
 
         public PageResult OnPost(int userId)
         {
+            
+
             userId = UserForUpdate.Id;
 
-            var existingUser = Context.Users.Find(userId);
+            var existingUser = Context.Users.Find(userId); // bunu objeye de atiyabiliyoruz sanirim public Model.User UserForUpdate2 { get; set; }
+            if (existingUser.UserDetails == null)
+            {
+                existingUser.UserDetails = new UserDetails(); // Initialize UserDetails with appropriate values
+            }
             if (existingUser != null) 
             {
                 existingUser.Name = UserForUpdate.Name;
                 existingUser.Email = UserForUpdate.Email;
+                existingUser.UserDetails.Address = UserForUpdate.UserDetails.Address;
+                existingUser.UserDetails.Phone = UserForUpdate.UserDetails.Phone;
                 Context.SaveChanges();   
                 return Page();
             }

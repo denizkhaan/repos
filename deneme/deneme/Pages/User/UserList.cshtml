@@ -1,0 +1,34 @@
+﻿@page
+@model deneme.Pages.User.UserListModel
+@{
+}
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>User ID</th>
+                <th>Name</th>
+                <th>Email</th>
+
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var user in Model._userlist)
+        {
+            <tr>
+                <td>@user.Id</td>
+                <td>@user.Name</td>
+                <td>@user.Email</td>
+                <td>
+                    @if (user.UserDetails != null)
+                    {
+                        <p>User ID: @user.UserDetails.UserId</p>
+                        <p>Phone: @user.UserDetails.Phone</p>
+                        <p>Adress: @user.UserDetails.Address</p>
+                    }
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+
+

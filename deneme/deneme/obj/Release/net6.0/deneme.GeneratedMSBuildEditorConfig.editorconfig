@@ -52,8 +52,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclxEZWxldGVVc2VyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/deniz/source/repos/deneme/deneme/Pages/User/DetailQuery.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclxEZXRhaWxRdWVyeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/deniz/source/repos/deneme/deneme/Pages/User/ShowUserDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclxTaG93VXNlckRldGFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/deniz/source/repos/deneme/deneme/Pages/User/UpdateUser.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclxVcGRhdGVVc2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/deniz/source/repos/deneme/deneme/Pages/User/UserList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclxVc2VyTGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/deniz/source/repos/deneme/deneme/Pages/_ViewImports.cshtml]
