@@ -34,7 +34,7 @@ namespace deneme.Pages.User
             var existingUser = Context.Users.Find(userId); // bunu objeye de atiyabiliyoruz sanirim public Model.User UserForUpdate2 { get; set; }
             if (existingUser.UserDetails == null)
             {
-                existingUser.UserDetails = new UserDetails(); // Initialize UserDetails with appropriate values
+                existingUser.UserDetails = new UserDetails(); // !
             }
             if (existingUser != null) 
             {
