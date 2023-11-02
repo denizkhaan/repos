@@ -10,8 +10,8 @@ namespace deneme.Pages.User
     {
         [BindProperty]
         public Model.User NewUser { get; set; }
-        [BindProperty]
-        public Model.UserDetails UserDetails { get; set; }
+        //[BindProperty]
+        //public Model.UserDetails UserDetails { get; set; }
 
         public ApplicationDbContext ContextDb { get; set; }
 
@@ -35,8 +35,9 @@ namespace deneme.Pages.User
         {
             try
             {
-                ContextDb.Users.Add(NewUser);
                 NewUser.UserDetails = UserDetails;
+                ContextDb.Users.Add(NewUser);
+                
                 ContextDb.Details.Add(UserDetails);
                 ContextDb.SaveChanges();
             }
