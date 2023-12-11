@@ -1,0 +1,15 @@
+C:\Users\deniz\source\repos\Data Structures\ds\bin\Debug\net8.0\ds.exe
+C:\Users\deniz\source\repos\Data Structures\ds\bin\Debug\net8.0\ds.deps.json
+C:\Users\deniz\source\repos\Data Structures\ds\bin\Debug\net8.0\ds.runtimeconfig.json
+C:\Users\deniz\source\repos\Data Structures\ds\bin\Debug\net8.0\ds.dll
+C:\Users\deniz\source\repos\Data Structures\ds\bin\Debug\net8.0\ds.pdb
+C:\Users\deniz\source\repos\Data Structures\ds\obj\Debug\net8.0\ds.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\deniz\source\repos\Data Structures\ds\obj\Debug\net8.0\ds.AssemblyInfoInputs.cache
+C:\Users\deniz\source\repos\Data Structures\ds\obj\Debug\net8.0\ds.AssemblyInfo.cs
+C:\Users\deniz\source\repos\Data Structures\ds\obj\Debug\net8.0\ds.csproj.CoreCompileInputs.cache
+C:\Users\deniz\source\repos\Data Structures\ds\obj\Debug\net8.0\ds.sourcelink.json
+C:\Users\deniz\source\repos\Data Structures\ds\obj\Debug\net8.0\ds.dll
+C:\Users\deniz\source\repos\Data Structures\ds\obj\Debug\net8.0\refint\ds.dll
+C:\Users\deniz\source\repos\Data Structures\ds\obj\Debug\net8.0\ds.pdb
+C:\Users\deniz\source\repos\Data Structures\ds\obj\Debug\net8.0\ds.genruntimeconfig.cache
+C:\Users\deniz\source\repos\Data Structures\ds\obj\Debug\net8.0\ref\ds.dll

@@ -16,8 +16,6 @@ namespace deneme.Model
         [ForeignKey("UserCategory")]
         public int UserCategoryId { get; set; }
         public UserDetails UserDetails { get; set; }
-
-
         public ICollection<UserRole> UserRoles { get; set; }
 
     }
